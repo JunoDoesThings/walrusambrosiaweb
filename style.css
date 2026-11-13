@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  background: #1d1624;
+  color: #c7aee2;
+  font-family: "IBM Plex Mono", Menlo, Consolas, monospace;
+  font-size: 13.5px;
+  line-height: 1.65;
+}
+a { color: #9fb89a; text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; height: auto; }
+
+#bar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 28px;
+  background: #27202d;
+  border-bottom: 1px solid #362d3d;
+  font-size: 12px;
+  z-index: 5;
+}
+#bar .in {
+  padding: 0 0 0 9vw;
+  line-height: 28px;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+#bar a {
+  color: #8e8399;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  margin-right: 26px;
+}
+#bar a:hover { color: #ebe3f2; text-decoration: none; }
+#bar a.here { color: #9fb89a; }
+
+#site {
+  padding: 70px 9vw 80px;
+  max-width: 900px;
+}
+h1 {
+  font-family: "EB Garamond", Georgia, serif;
+  font-weight: normal;
+  font-size: 44px;
+  line-height: 1.1;
+  color: #ebe3f2;
+  margin: 0 0 30px;
+}
+h2 {
+  font-family: "EB Garamond", Georgia, serif;
+  font-weight: normal;
+  font-size: 24px;
+  color: #ebe3f2;
+  margin: 36px 0 10px;
+}
+p { margin: 0 0 18px; max-width: 540px; }
+
+
+.cols { display: flex; gap: 48px; align-items: flex-start; }
+.cols .main { flex: 1; max-width: 540px; }
+.side {
+  width: 220px;
+  flex-shrink: 0;
+  font-size: 12.5px;
+  border-left: 1px solid #3a3042;
+  padding-left: 18px;
+  margin-top: 4px;
+}
+.label {
+  color: #86a083;
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  margin: 0 0 4px;
+}
+.side div + .label { margin-top: 16px; }
+.cream { color: #ebe3f2; }
+.dim { color: #7f7389; }
+
+.proj { margin: 0 0 24px; max-width: 560px; }
+.proj .name { color: #ebe3f2; font-weight: 500; }
+.proj .tech { color: #86a083; font-size: 12px; }
+.proj p { margin: 2px 0 2px; }
+
+ul.plain { list-style: none; padding: 0; margin: 0 0 18px; max-width: 560px; }
+ul.plain li { padding-left: 18px; text-indent: -18px; margin-bottom: 4px; }
+ul.plain li:before { content: "- "; color: #7f7389; }
+
+dl { margin: 0; max-width: 580px; }
+dt { color: #ebe3f2; margin-top: 18px; }
+dd { margin: 2px 0 0 0; }
+
+
+#foot { margin-top: 60px; font-size: 11.5px; color: #5f566a; }
+
+@media (max-width: 700px) {
+  #bar .in { padding-left: 20px; }
+  #bar a { margin-right: 18px; }
+  #site { padding: 56px 20px 60px; }
+  h1 { font-size: 36px; }
+  .cols { display: block; }
+  .side { width: auto; border-left: 0; border-top: 1px solid #3a3042; padding: 16px 0 0; margin-top: 10px; }
+}
